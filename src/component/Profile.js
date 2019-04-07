@@ -4,7 +4,9 @@ import axios from 'axios';
 //uses component as the extends Component
 class Profile extends Component {
 	 state = {
-
+    artistname: null,
+    songname: null,
+    lyrics: null
   }
   
   handleClick = () => {
@@ -25,12 +27,19 @@ class Profile extends Component {
   	});
   }
   
+    setArtistName = e => {
+  	// e.target.value;
+  	// console.log(e.target.value);
+  	this.setState({
+  		artistname: e.target.value
+  	});
+  }
   
 	render() {
 		return(
 			<div>
 				<p> My App </p>
-			
+					<input onChange= {this.setArtistName} placeholder="Artist Name" />
 			</div>
 			);
 	}
