@@ -48,6 +48,7 @@ class Profile extends Component {
 					<input onChange= {this.setArtistName} placeholder="Artist Name" />
 					<input onChange= {this.setSongName} placeholder="Song Name" />
 				<button onClick={this.handleClick}>Submit</button>
+				{this.state.lyrics}
 			</div>
 		);
 	}
